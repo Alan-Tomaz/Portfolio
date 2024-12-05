@@ -1,0 +1,1 @@
+/* document.onclick = () => window.alert("a") */

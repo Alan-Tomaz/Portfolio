@@ -9,7 +9,7 @@
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 61%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -39,6 +39,9 @@
     --font-medium: 500;
     --font-semi-bold: 600;
     --font-bold: 700;
+
+    /* Transition */
+    --transition-ease: .3s ease all;
 
     /* ======== MARGEM BOTTOM ========= */
     /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
@@ -125,6 +128,27 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+}
+
+/* BUTTONS */
+.btn {
+    background-color: var(--first-color);
+    padding: 1rem .8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: var(--font-regular);
+    width: fit-content;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    transition: var(--transition-ease);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--first-color-alt);
 }
 
 /* NAV */

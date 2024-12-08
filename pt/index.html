@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Tomaz | Portfólio</title>
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- FONT POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <!-- NAV -->
+        <nav class="header-nav container-larger">
+            <a href="#home" class="header-nav__logo">Alan</a>
+            <div class="nav-menu-alt">
+                <ul class="nav-menu-alt-list">
+                    <li class="nav-list__item"><a href="#home" class="nav-item__link"><i
+                                class="uil uil-estate nav-icon"></i>Home</a></li>
+                    <li class="nav-list__item"><a href="#about" class="nav-item__link"><i
+                                class="uil uil-user nav-icon"></i>Sobre</a></li>
+                    <li class="nav-list__item"><a href="#skills" class="nav-item__link"><i
+                                class="uil uil-file-alt nav-icon"></i>Habilidades</a></li>
+                    <li class="nav-list__item"><a href="#services" class="nav-item__link"><i
+                                class="uil uil-briefcase-alt nav-icon"></i>Serviços</a></li>
+                    <li class="nav-list__item"><a href="#portfolio" class="nav-item__link nav-item__link--actived"><i
+                                class="uil uil-scenery nav-icon"></i>Portfólio</a></li>
+                    <li class="nav-list__item"><a href="#contact-me" class="nav-item__link"><i
+                                class="uil uil-message nav-icon"></i>Me Contate</a></li>
+                </ul>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="#home" class="nav-item__link">Home</a></li>
+                    <li class="nav-list__item"><a href="#about" class="nav-item__link">Sobre</a></li>
+                    <li class="nav-list__item"><a href="#skills" class="nav-item__link">Habilidades</a></li>
+                    <li class="nav-list__item"><a href="#services" class="nav-item__link">Serviços</a></li>
+                    <li class="nav-list__item"><a href="#portfolio"
+                            class="nav-item__link nav-item__link--actived">Portfólio</a></li>
+                    <li class="nav-list__item"><a href="#contact-me" class="nav-item__link">Me Contate</a></li>
+                </ul>
+                <div class="nav-btns">
+                    <i class="uil uil-moon nav-btns__btn nav-item__link change-theme moon-btn" id="theme-button"></i>
+                    <div class="nav-btns__btn change-language__box" id="popup-trigger">
+                        <div class="nav-item__link change-language">
+                            <span>PT-BR</span>
+                            <i class="uil uil-angle-down popup-activation__arrow" id="popup-activation__arrow"></i>
+                        </div>
+                        <div class="change-language__popup" id="change-language__popup">
+                            <span id="change-language" onclick="changeLanguage('en-us')">EN-US</span>
+                        </div>
+                    </div>
+                    <i class="uil uil-bars nav-btns__btn nav-item__link menu-btn"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- HOME -->
+        <section class="home section" id="home">
+            <div class="home-container container-larger">
+                <div class="home__picture">
+                    <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" class="home-blob"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            <image href="../img/profile.png" y="5" class="blob-img" />
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="home__text">
+                    <h1 class="hero__title">Olá, Me chamo <span class="text-color">Alan</span></h1>
+                    <h2 class="hero__subtitle">Eu sou um <span class="text-color" id="text-change">Web Developer</h2>
+                    <p class="hero__paragraph">Sou um desenvolvedor back-end e front-end, eu desenvolvendo soluções
+                        completas combinando uma lógica robusta com interfaces intuitivas para criar experiências web
+                        excepcionais.</p>
+                    <div class="home__btns">
+                        <a target="_blank" href="https://www.linkedin.com/in/alan-tomaz-55ab18232/"
+                            class="home-btns__linkedin home-btn">
+                            <i class="uil uil-linkedin home-btn__icon home-btns__linkedin-icon"></i>
+                        </a>
+                        <a target="_blank" href="https://github.com/Alan-Tomaz" class="home-btns__github home-btn">
+                            <i class="uil uil-github home-btn__icon home-btns__github-icon"></i>
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com" class="home-btns__instagram home-btn">
+                            <i class="uil uil-instagram home-btn__icon home-btns__instagram-icon"></i>
+                        </a>
+                        <a target="_blank" href="https://x.com" class="home-btns__twitter home-btn">
+                            <i class="uil uil-twitter home-btn__icon home-btns__twitter-icon"></i>
+                        </a>
+                    </div>
+                    <a href="#contact-me" class="home__contact-me btn">
+                        <span>Me Contate</span>
+                        <i class="uil uil-message home-contact-me__icon"></i>
+                    </a>
+                    <a href="#about" class="home__scroll-down">
+                        <i class="uil uil-mouse-alt home-scroll-down__icon">
+                        </i>
+                        <span>Role para Baixo</span>
+                        <i class="uil uil-arrow-down home-scroll-down__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="about-container container">
+                <h1 class="section__title about-section__title">Sobre</h1>
+                <h4 class="section__subtitle">Minha Introdução</h4>
+                <div class="about__content">
+                    <div class="about__image">
+                        <img src="../img/16x9-image.jpg" alt="">
+                    </div>
+                    <div class="about__right-content">
+                        <p>Eu me esforço para desenvolver soluções completas que combinam desempenho no back-end com
+                            interfaces
+                            no front-end intuitivas, sempre focando em oferecer experiências
+                            digitais eficientes e funcionais. Com domínio de ferramentas como React, Node.js e MongoDB,
+                            transformo ideias
+                            em projetos que atendem tanto às demandas técnicas quanto às expectativas dos usuários.
+                            Estou constantemente
+                            buscando novos desafios e oportunidades para expandir meu conhecimento e contribuir para
+                            projetos impactantes. Este portfólio reflete minha trajetória como desenvolvedor e minha
+                            dedicação em
+                            entregar resultados de qualidade.</p>
+                        <div class="about__stats">
+                            <div class="about-stats__stat">
+                                <span class="about-stat__number">0</span>
+                                <p class="about-stat__desc">Anos de.</br>Experiência.</p>
+                            </div>
+                            <div class="about-stats__stat">
+                                <span class="about-stat__number">0</span>
+                                <p class="about-stat__desc">Projetos</br>Completados.</p>
+                            </div>
+                        </div>
+                        <div class="about__button btn">
+                            <span>Baixe o CV</span>
+                            <i class="uil uil-import"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SKILLS -->
+        <section class="skills section" id="skills">
+            <div class="skills-container container">
+                <h1 class="section__title">Habilidades</h1>
+                <h4 class="section__subtitle">Meu Nivel Técnico</h4>
+                <h3 class="skills__title"><i class="uil uil-brackets-curly"></i>Desenvolvedor Front End</h3>
+                <div class="skills__frontend skills__items">
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/html.png" alt="html">
+                            <h2>HTML</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Intermediário</h3>
+                        <p class="skills-items__text">3 Anos de Experiência</p>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/css.png" alt="css">
+                            <h2>CSS</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Intermediário</h3>
+                        <p class="skills-items__text">3 Anos de Experiência</p>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/javascript.png" alt="javascript">
+                            <h2>JavaScript</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Intermediário</h3>
+                        <p class="skills-items__text">2 Anos de Experiência</p>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/react.svg" alt="react">
+                            <h2>React</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Intermediário</h3>
+                        <p class="skills-items__text">1 Anos de Experiência</p>
+                    </div>
+                </div>
+                <h3 class="skills__title"><i class="uil uil-server-network"></i>Desenvolvedor Back End</h3>
+                <div class="skills__backend skills__items">
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/php.png" alt="php">
+                            <h2>PHP</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Iniciante</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/node-js.png" alt="node-js">
+                            <h2>Node.js</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Iniciante</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/mongodb.svg" alt="mongodb">
+                            <h2>MongoDB</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Iniciante</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/mysql.svg" alt="mysql">
+                            <h2>MySQL</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Iniciante</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+                </div>
+                <h3 class="skills__title"><i class="uil uil-swatchbook skills-icon"></i>Designer</h3>
+                <div class="skills__designer skills__items">
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/figma.png" alt="figma">
+                            <h2>Figma</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Intermediário</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/photoshop.png" alt="photoshop">
+                            <h2>Photoshop</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Iniciante</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+                    <div class="skills__item">
+                        <div class="skills-items__title">
+                            <img src="../img/canva.png" alt="canva">
+                            <h2>Canva</h2>
+                        </div>
+                        <h3 class="skills-items__subtitle">Iniciante</h3>
+                        <p class="skills-items__text">1 Ano de Experiência</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- QUALIFICATION -->
+        <section class="section qualification" id="qualification">
+            <div class="qualification-container container">
+                <h1 class="section__title">Qualificação</h1>
+                <h4 class="section__subtitle">Minha experiência pessoal</h4>
+                <div class="qualification__items">
+                    <div class="qualification__item">
+                        <h3 class="qualification__title"><i class="uil uil-graduation-cap"></i> Educacão</h4>
+                            <div class="qualification-item__box">
+                                <div class="qualificication-box__content">
+                                    <div class="qualiication-content__line"></div>
+                                    <div class="qualification-content__text">
+                                        <div class="qualification-text__date">
+                                            <i class="uil uil-calendar-alt"></i>
+                                            <span>2020 - 2022</span>
+                                        </div>
+                                        <h4 class="qualication-text__title">Escola Estadual Elza Moreira Lopes</h4>
+                                        <p>Concluí o ensino médio, onde desenvolvi habilidades sociais e aprofundei meus
+                                            conhecimentos de matemática, lógica e escrita. Durante esse período,
+                                            participei de projetos que estimularam meu interesse na área de
+                                            ​​ciência da computação e desenvolvimento de software, o que impulsionou
+                                            minha contínua
+                                            busca por conhecimento.</p>
+                                    </div>
+                                </div>
+                                <div class="qualificication-box__content">
+                                    <div class="qualiication-content__line"></div>
+                                    <div class="qualification-content__text">
+                                        <div class="qualification-text__date">
+                                            <i class="uil uil-calendar-alt"></i>
+                                            <span>2020 - 2022</span>
+                                        </div>
+                                        <h4 class="qualication-text__title">Técnico de Informática - Escola Estadual
+                                            Modestino Andrade Sobrinho</h4>
+                                        <p>Concluí minha formação técnica em Informática, onde adquiri
+                                            conhecimento teórico e prático em redes, manutenção de computadores e
+                                            programação. Durante o curso, desenvolvi habilidades em linguagens como C
+                                            e JavaScript, além de conhecimentos em HTML e CSS, o que ampliou meu
+                                            entendimento sobre desenvolvimento web e soluções tecnológicas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="qualification__item">
+                        <h3 class="qualification__title"><i class="uil uil-briefcase-alt qualification-icon"></i>
+                            Trabalho
+                            </h4>
+                            <div class="qualification-item__box">
+                                <div class="qualificication-box__content">
+                                    <div class="qualiication-content__line"></div>
+                                    <div class="qualification-content__text">
+                                        <div class="qualification-text__date">
+                                            <i class="uil uil-calendar-alt"></i>
+                                            <span>2021 - 2022</span>
+                                        </div>
+                                        <h4 class="qualication-text__title">Estagiário - Intersete Telecom</h4>
+                                        <p>Trabalhei em um provedor de serviços de internet, onde desenvolvi
+                                            conhecimento em infraestrutura de rede, com foco em redes ópticas. Forneci
+                                            suporte técnico, resolvendo problemas rotineiros de rede de computadores, o
+                                            que também melhorou minhas habilidades de comunicação e trabalho em equipe
+                                            em um ambiente dinâmico.</p>
+                                    </div>
+                                </div>
+                                <div class="qualificication-box__content">
+                                    <div class="qualiication-content__line"></div>
+                                    <div class="qualification-content__text">
+                                        <div class="qualification-text__date">
+                                            <i class="uil uil-calendar-alt"></i>
+                                            <span>2023 - 2025</span>
+                                        </div>
+                                        <h4 class="qualication-text__title">Suporte de Redes e Informática - Hz Telecom
+                                        </h4>
+                                        <p>Em uma nova experiência profissional em um provedor de internet, trabalhei em
+                                            suporte técnico para redes e TI, resolvendo problemas relacionados a
+                                            redes de computadores com maior profundidade. Durante esse período, adquiri
+                                            conhecimento Intermediário
+                                            sobre redes e sua infraestrutura, além de atuar
+                                            na configuração e manutenção de computadores e sistemas. Essa experiência
+                                            consolidou meu entendimento geral da área de TI e me ajudou a aprimorar
+                                            minhas soft skills, como comunicação, resolução de problemas e trabalho em
+                                            equipe,
+                                            que são essenciais para lidar com situações desafiadoras.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES -->
+        <section class="section services" id="services">
+            <div class="services-container container">
+                <h1 class="section__title">Serviços</h1>
+                <h4 class="section__subtitle">O que ofereço</h4>
+                <div class="services__items">
+                    <div class="services__item">
+                        <i class="uil uil-arrow services-icon"></i>
+                        <h2 class="services-item__title">Desenvolvedor Front End</h2>
+                        <p>Crio interfaces modernas, responsivas e intuitivas, garantindo uma experiência visual
+                            atraente e funcional
+                            para o usuário. Utilizo tecnologias como React e CSS avançado para
+                            entregar
+                            layouts otimizados e de alto desempenho.</p>
+                        <span>Veja Mais <i class="uil uil-arrow-right button-icon"></i></span>
+                    </div>
+                    <div class="services__item">
+                        <i class="uil uil-server services-icon"></i>
+                        <h2 class="services-item__title">Desenvolvedor Back End</h2>
+                        <p>Desenvolvo sistemas robustos e escaláveis, estruturando a lógica e a arquitetura que tornam
+                            as aplicações eficientes e seguras. Com experiência em Node.js e MongoDB, construo APIs
+                            e
+                            integrações que dão suporte ao desempenho e à confiabilidade das soluções.</p>
+                        <span>Veja Mais <i class="uil uil-arrow-right button-icon"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PORTFOLIO -->
+        <section class="section portfolio" id="portfolio">
+            <div class="portfolio-container portfolio">
+                <h1 class="section__title">Portfólio</h1>
+                <h4 class="section__subtitle">Trabalhos mais recentes</h4>
+                <div class="portfolio__items">
+                    <div class="portfolio__item">
+                        <img src="../img//portfolio-1.png" alt="portfolio-item-1">
+                        <div class="portfolio-item__hidden-content">
+                            <h4>Blog</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem
+                                reprehenderit iusto porro rerum? Possimus?</p>
+                            <i class="uil uil-external-link-alt portfolio-item-hidden-content__btn"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT ME SKIP -->
+        <section class="section contact-me-skip">
+            <div class="contact-me-skip-container container">
+                <div class="contact-me-skip__text">
+                    <span>Me Contate</span>
+                    <a href="#contact-me" class="contact-me-skip__btn btn">Me contate <i
+                            class="uil uil-message"></i></a>
+                </div>
+                <img src="../img/contact-me-img.svg" alt="contact-me-img">
+            </div>
+        </section>
+        <!-- CONTACT ME -->
+        <section class="section contact-me" id="contact-me">
+            <div class="contact-me-container">
+                <h1 class="section__title">Me contate</h1>
+                <h4 class="section__subtitle">Entre em contato</h4>
+                <div class="contact-me__box">
+                    <div class="contact-me__contacts">
+                        <div class="contact-me__contact">
+                            <i class="uil uil-envelope-alt"></i>
+                            <div class="contact-me-contact__text">
+                                <h4>Email</h4>
+                                <span>alan4tomaz8@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-me__contact">
+                            <i class="uil uil-location-point"></i>
+                            <div class="contact-me-contact__text">
+                                <h4>Localização</h4>
+                                <span>Minas Gerais, Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-me__form">
+                        <div class="contact-me__form-1">
+                            <div class="contact-me-form__name">
+                                <span>Nome</span>
+                                <input type="text" name="name" id="input-name">
+                            </div>
+                            <div class="contact-me-form__email">
+                                <span>Email</span>
+                                <input type="text" name="email" id="input-email">
+                            </div>
+                        </div>
+                        <div class="contact-me-form__project">
+                            <span>Mensagem</span>
+                            <textarea name="input-message" id="input-message"></textarea>
+                        </div>
+                        <div class="contact-me-form__btn btn">Envia a Mensagem <i class="uil uil-message"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer__left">
+                <h2>Alan</h2>
+                <span>Desenvolvedor Web</span>
+            </div>
+            <div class="footer__middle">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#services">Serviços</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#contact-me">Me Contate</a>
+            </div>
+            <div class="footer__right">
+                <a href="https://github.com/Alan-Tomaz" target="_blank"><i class="uil uil-github"></i></a>
+                <a href="https://www.linkedin.com/in/alan-tomaz-55ab18232/" target="_blank"><i
+                        class="uil uil-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="uil uil-instagram"></i></a>
+                <a href="https://x.com/home?lang=pt-br" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+            </div>
+        </div>
+        <span>© <a href="https://github.com/Alan-Tomaz" target="_blank" class="footer__link">Alan Tomaz</a>. Todos
+            Direitos Reservados</span>
+    </footer>
+    <div class="scroll-up" id="scroll-up">
+        <i class="uil uil-arrow-up"></i>
+    </div>
+    <!-- EXTERNAL JS SCRIPT -->
+    <script src="../js/main.js"></script>
+    <script src="../js/ptCode.js"></script>
+</body>
+
+</html>

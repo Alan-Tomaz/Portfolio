@@ -72,13 +72,13 @@ themeButton.addEventListener("click", () => {
 const changeLanguage = (language) => {
     switch (language) {
         case 'pt-br':
-            window.location.href = `./pt/index.html`;
+            window.location.href = `../pt/index.html`;
             break;
         case 'en-us':
-            window.location.href = `./en/index.html`;
+            window.location.href = `../en/index.html`;
             break;
         default:
-            window.location.href = `./en/index.html`;
+            window.location.href = `../en/index.html`;
             break
     }
 }

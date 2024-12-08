@@ -54,7 +54,8 @@
                     <li class="nav-list__item"><a href="#contact-me" class="nav-item__link">Contact Me</a></li>
                 </ul>
                 <div class="nav-btns">
-                    <i class="uil uil-moon nav-btns__btn nav-item__link moon-btn"></i>
+                    <i class="uil uil-moon nav-btns__btn nav-item__link change-theme moon-btn"></i>
+                    <i class="uil uil-moon change-theme uil-sun sun-btn" id="theme-button"></i>
                     <div class="nav-btns__btn change-language__box">
                         <div class="nav-item__link change-language">
                             <span>EN-US</span>
@@ -75,52 +76,54 @@
         <section class="home section" id="home">
             <div class="home-container container-larger">
                 <div class="home__picture">
-                    <svg class="home-blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                    <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" class="home-blob"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <mask id="mask0" mask-type="alpha">
                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
         130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
         97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
+        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
                         </mask>
                         <g mask="url(#mask0)">
                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
         165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
         129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
-                            <image class="home-blob-img" x="12" y="18"
-                                href="img/ruan-richard-rodrigues-m7w726CDfLg1-unsplash.png"></image>
+        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            <image href="./img/profile.png" y="5" class="blob-img" />
                         </g>
                     </svg>
-                    <img src="./img/profile.png" alt="profile-img">
+
                 </div>
-                <h1 class="hero__title">Hi I'm Alan</h1>
-                <h2 class="hero__subtitle">I'm a Web Developer</h2>
-                <p>I am a back-end and front-end developer, developing complete solutions by combining robust logic with
-                    intuitive interfaces to create exceptional web experiences.</p>
-                <div class="home__btns">
-                    <div class="home-btns__linkedin">
-                        <i class="uil uil-linkedin home-btns__linkedin-icon"></i>
+                <div class="home__text">
+                    <h1 class="hero__title">Hi I'm Alan</h1>
+                    <h2 class="hero__subtitle">I'm a Web Developer</h2>
+                    <p>I am a back-end and front-end developer, developing complete solutions by combining robust logic
+                        with
+                        intuitive interfaces to create exceptional web experiences.</p>
+                    <div class="home__btns">
+                        <div class="home-btns__linkedin">
+                            <i class="uil uil-linkedin home-btns__linkedin-icon"></i>
+                        </div>
+                        <div class="home-btns__github">
+                            <i class="uil uil-github home-btns__github-icon"></i>
+                        </div>
+                        <div class="home-btns__instagram">
+                            <i class="uil uil-instagram home-btns__instagram-icon"></i>
+                        </div>
+                        <div class="home-btns__twitter">
+                            <i class="uil uil-twitter home-btns__twitter-icon"></i>
+                        </div>
                     </div>
-                    <div class="home-btns__github">
-                        <i class="uil uil-github home-btns__github-icon"></i>
+                    <a href="#contact-me" class="home__contact-me btn">
+                        <span>Contact Me</span>
+                        <i class="uil uil-message home-contact-me__icon"></i>
+                    </a>
+                    <div class="home__scroll-down">
+                        <i class="uil uil-mouse-alt home-scroll-down__icon">
+                        </i>
+                        <span>Scroll Down</span>
+                        <i class="uil uil-arrow-down home-scroll-down__icon"></i>
                     </div>
-                    <div class="home-btns__instagram">
-                        <i class="uil uil-instagram home-btns__instagram-icon"></i>
-                    </div>
-                    <div class="home-btns__twitter">
-                        <i class="uil uil-twitter home-btns__twitter-icon"></i>
-                    </div>
-                </div>
-                <a href="#contact-me" class="home__contact-me btn">
-                    <span>Contact Me</span>
-                    <i class="uil uil-message home-contact-me__icon"></i>
-                </a>
-                <div class="home__scroll-down">
-                    <i class="uil uil-mouse-alt home-scroll-down__icon">
-                    </i>
-                    <span>Scroll Down</span>
-                    <i class="uil uil-arrow-down home-scroll-down__icon"></i>
                 </div>
             </div>
         </section>

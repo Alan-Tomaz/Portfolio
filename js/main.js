@@ -70,15 +70,16 @@ themeButton.addEventListener("click", () => {
 
 /* CHANGE PAGE LANGUAGE */
 const changeLanguage = (language) => {
+    const basePath = window.location.pathname.split("/").slice(0, -2).join("/");
     switch (language) {
         case 'pt-br':
-            window.location.href = `../pt/index.html`;
+            window.location.href = `${basePath}/pt/index.html`;
             break;
         case 'en-us':
-            window.location.href = `../en/index.html`;
+            window.location.href = `${basePath}/en/index.html`;
             break;
         default:
-            window.location.href = `../en/index.html`;
+            window.location.href = `${basePath}/en/index.html`;
             break
     }
 }

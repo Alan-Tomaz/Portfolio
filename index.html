@@ -24,9 +24,11 @@
         // Escolhe o idioma ou aplica o padrão
         const language = supportedLanguages.includes(userLanguage) ? userLanguage : defaultLanguage;
 
+        const basePath = window.location.pathname.split("/").slice(0, -1).join("/");
+
         // Redireciona para a pasta correspondente
         if (!window.location.pathname.includes(language)) {
-            window.location.href = `./${language}/index.html`;
+            window.location.href = `${basePath}/${language}/index.html`;
         }
     </script>
 

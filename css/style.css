@@ -53,6 +53,7 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
+    --mb-4: 4rem;
     --mb-6: 6rem;
     --mb-8: 8rem;
 
@@ -130,7 +131,7 @@ img {
 }
 
 .section {
-    padding: 2rem 0 4rem;
+    padding-top: 6rem;
 }
 
 .section__title {
@@ -341,10 +342,6 @@ img {
 
 /* HOME */
 
-.home {
-    padding: 6rem 0rem;
-}
-
 .home-container {
     padding: 6rem 0rem;
     display: flex;
@@ -515,9 +512,43 @@ img {
 /* ABOUT */
 
 .about {
-    margin-top: 0 rem;
+    margin-bottom: var(--mb-3);
 }
 
-.about-section__title {
-    margin-top: 0rem;
+.about__content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
+
+.about__image {
+    width: 50%;
+}
+
+.about__image img {
+    border-radius: 10px;
+}
+
+.about__right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.about__stats {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 3rem;
+    display: flex;
+    text-align: center;
+    font-size: var(--small-font-size);
+}
+
+.about-stat__number {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+}
+
+/* SKILLS */

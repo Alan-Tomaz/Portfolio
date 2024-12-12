@@ -607,3 +607,92 @@ img {
 /* .skills__designer {
     margin-bottom: var(--mb-6);
 } */
+
+/* QUALIFICATIONS */
+.qualification {
+    margin-bottom: var(--mb-3);
+}
+
+.qualification__items {
+    display: flex;
+    gap: 4rem;
+}
+
+.qualification__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.qualification__title {
+    padding-left: 1rem;
+    font-size: var(--h4-font-size);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.qualification-title__icon {
+    color: var(--first-color);
+    font-size: 2rem;
+}
+
+.qualification-item__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.qualificication-box__content {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.qualiication-content__line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qualiication-line__circle {
+    width: 14px;
+    height: 14px;
+    background-color: var(--first-color);
+    border-radius: 100%;
+}
+
+.qualiication-line__line {
+    height: 100%;
+    width: 2px;
+    background-color: var(--first-color);
+}
+
+.qualification-content__text {
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.qualification-text__date {
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+    color: var(--text-color-light);
+    font-size: var(--small-font-size);
+}
+
+.qualification-date__calender {
+    font-size: 1rem;
+}
+
+.qualication-text__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.qualification-content__text p {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+}

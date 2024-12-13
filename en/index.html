@@ -375,12 +375,13 @@
                 <h4 class="section__subtitle">What I Offer</h4>
                 <div class="services__items">
                     <div class="services__item">
-                        <i class="uil uil-arrow services-icon"></i>
+                        <i class="uil uil-brackets-curly services-icon"></i>
                         <h2 class="services-item__title">Front-end Developer</h2>
                         <p>I create modern, responsive and intuitive interfaces, ensuring an attractive and functional
                             visual experience for the user. I use technologies such as React and advanced CSS to deliver
                             optimized and high-performance layouts.</p>
-                        <span>View More <i class="uil uil-arrow-right button-icon"></i></span>
+                        <span id="open-modal-0" onclick="openModal(0)">View More <i
+                                class="uil uil-arrow-right button-icon"></i></span>
                     </div>
                     <div class="services__item">
                         <i class="uil uil-server services-icon"></i>
@@ -388,7 +389,51 @@
                         <p>I develop robust and scalable systems, structuring the logic and architecture that make
                             applications efficient and secure. With experience in Node.js and MongoDB, I build APIs and
                             integrations that support the performance and reliability of solutions.</p>
-                        <span>View More <i class="uil uil-arrow-right button-icon"></i></span>
+                        <span id="open-modal-1" onclick="openModal(1)">View More <i
+                                class="uil uil-arrow-right button-icon"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="services__modal" id="modal">
+                <div class="services-modal__frontend services-modal__window" id="modal-frontend">
+                    <div class="modal__title">
+                        <h3>Front-end Developer</h3>
+                        <i class="uil uil-times modal-window__close" id="close-modal" onclick="closeModal()"></i>
+                    </div>
+                    <p class="modal__text">I create modern, responsive and intuitive interfaces,
+                        ensuring an attractive and functional
+                        visual experience for the user. I use technologies such as React and
+                        advanced CSS to deliver
+                        optimized and high-performance layouts.</p>
+                    <div class="modal__details">
+                        <div class="modal__detail">
+                            <i class="uil uil-check-circle services-modal-icon"></i>
+                            <span>I Develop The User Interface.</span>
+                        </div>
+                        <div class="modal__detail">
+                            <i class="uil uil-check-circle services-modal-icon"></i>
+                            <span>Web Page Development.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-modal__backend services-modal__window" id="modal-backend">
+                    <div class="modal__title">
+                        <h3>Back-end Developer</h3>
+                        <i class="uil uil-times modal-window__close" id="close-modal" onclick="closeModal()"></i>
+                    </div>
+                    <p class="modal__text">I develop robust and scalable systems, structuring the logic and architecture
+                        that make
+                        applications efficient and secure. With experience in Node.js and MongoDB, I build APIs and
+                        integrations that support the performance and reliability of solutions.</p>
+                    <div class="modal__details">
+                        <div class="modal__detail">
+                            <i class="uil uil-check-circle services-modal-icon"></i>
+                            <span>I Develop APIs.</span>
+                        </div>
+                        <div class="modal__detail">
+                            <i class="uil uil-check-circle services-modal-icon"></i>
+                            <span>Create Backend Structures</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -400,7 +445,7 @@
                 <h4 class="section__subtitle">Most Recent Works</h4>
                 <div class="portfolio__items">
                     <div class="portfolio__item">
-                        <img src="../img//portfolio-1.png" alt="portfolio-item-1">
+                        <img src="../img/portfolio-1.png" alt="portfolio-item-1">
                         <div class="portfolio-item__hidden-content">
                             <h4>Blog</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem

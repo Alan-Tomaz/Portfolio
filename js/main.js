@@ -137,3 +137,39 @@ function scrollUp() {
     else scrollUp.classList.remove('show-scroll-up')
 }
 window.addEventListener('scroll', scrollUp)
+
+/* MODAL */
+/* OPEN SERVICES MODAL */
+const modal = document.querySelector("#modal");
+const modalFrontend = document.querySelector("#modal-frontend");
+const modalBackend = document.querySelector("#modal-backend");
+
+let isModalOpen = false;
+let modalTimeout;
+
+function openModal(option) {
+    modal.classList.remove('modal-hidden');
+    modal.classList.add('active-modal');
+    /* Clear Time Out */
+    clearTimeout(modalTimeout)
+    isPopupOpen = true;
+
+    switch (option) {
+        case 0:
+            modalBackend.classList.add('modal-hidden');
+            break;
+        case 1:
+            modalFrontend.classList.add('modal-hidden');
+            break;
+    }
+}
+
+/* CLOSE SERVICES MODAL */
+function closeModal() {
+    modal.classList.remove('active-modal');
+    isModalOpen = false;
+    modalTimeout = setTimeout(() => {
+        modalFrontend.classList.remove('modal-hidden');
+        modalBackend.classList.remove('modal-hidden');
+    }, 300);
+}

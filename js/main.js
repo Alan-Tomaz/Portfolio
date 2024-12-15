@@ -122,7 +122,6 @@ popupBox.addEventListener('click', showPopup);
 
 // Fechar o popup ao clicar fora dele
 document.addEventListener('click', (event) => {
-    console.log(event.target)
     // if not be the popupbox element or your childs, the popup is closed
     if (isPopupOpen && !popupBox.contains(event.target)) {
         hidePopup();
@@ -172,4 +171,57 @@ function closeModal() {
         modalFrontend.classList.remove('modal-hidden');
         modalBackend.classList.remove('modal-hidden');
     }, 300);
+}
+
+/* SHOW ABOUT BUTTON DROPDOWN */
+/* const aboutButton = document.querySelector("#about__button");
+const aboutDropdown = document.querySelector("#about__dropdown");
+const aboutButtons = document.querySelectorAll(".about-button__opt");
+let isDropdown = false;
+let dropdownTimeout; */
+
+/* OPEN DROPDOWN */
+/* function showDropdown() {
+    aboutDropdown.classList.remove('dropdown-hidden');
+    setTimeout(() => {
+        aboutDropdown.classList.add('dropdown-visible');
+    }, 10);
+    // Clear Time Out
+    clearTimeout(dropdownTimeout)
+    isDropdown = true;
+    aboutButton.removeEventListener('click', showDropdown);
+    aboutButton.addEventListener('click', hideDropdown);
+}*/
+
+
+/* HIDE DROPDOWN */
+/* function hideDropdown() {
+    aboutDropdown.classList.remove('dropdown-visible');
+    isDropdown = false;
+    aboutButton.removeEventListener('click', hideDropdown);
+    aboutButton.addEventListener('click', showDropdown);
+    dropdownTimeout = setTimeout(() => {
+        aboutDropdown.classList.add('dropdown-hidden');
+        dropdownTimeout = null;
+    }, 300); // Tempo deve corresponder à duração do transition no CSS
+} */
+
+/* OPEN DROPDOWN */
+/* aboutButton.addEventListener('click', showDropdown);
+aboutButtons.forEach(elem => elem.addEventListener('click', hideDropdown)); */
+
+
+// Fechar o dropdown ao clicar fora dele
+/* document.addEventListener('click', (event) => {
+    // if not be the dropdown element or your childs, the dropdown is closed
+    if (isDropdown && !aboutButton.contains(event.target)) {
+        hideDropdown();
+    }
+}); */
+
+/* CHANGE INPUT FOCUS */
+
+function inputFocus(e) {
+    const contactmeForm = document.getElementById(`input-${e.target.dataset.input}`);
+    contactmeForm.focus();
 }

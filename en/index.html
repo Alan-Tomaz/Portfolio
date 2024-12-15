@@ -17,7 +17,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
@@ -532,9 +531,15 @@
                             <span>Message</span>
                             <textarea name="input-message" id="input-message" class="input input__textarea"></textarea>
                         </div>
-                        <button type="submit" class="contact-me-form__btn btn">Send Message <i
-                                class="uil uil-message"></i>
+                        <button type="submit" class="contact-me-form__btn btn" id="send-message">Send Message
+                            <i class="uil uil-message contact-me-form__btn-icon"></i>
+                            <img src="../img/loading.svg" alt="loading" class="contact-me-form__loading">
                         </button>
+                        <div class="contact-me__form-msg" id="contact-me-msgdiv">
+                            <i class="uil uil-exclamation-triangle form__error-icon"></i>
+                            <i class="uil uil-check-circle form__success-icon"></i>
+                            <span id="response-message"></span>
+                        </div>
                         <buton class="g-recaptcha" data-sitekey="6LeJ8JsqAAAAAOMeocNxFRYkjSQYw8ldhO3dQvD9">
                 </div>
             </div>

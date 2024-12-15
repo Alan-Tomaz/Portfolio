@@ -1164,6 +1164,20 @@ img {
     min-height: 200px;
 }
 
+.contact-me-form__loading {
+    width: 23px;
+    height: 23px;
+    display: none;
+}
+
+.contact-me-form__btn.loading .contact-me-form__loading {
+    display: flex;
+}
+
+.contact-me-form__btn.loading .contact-me-form__btn-icon {
+    display: none;
+}
+
 /* FOOTER */
 footer {
     background-color: var(--first-color-second);

@@ -132,7 +132,7 @@
             <div class="about-container container">
                 <h1 class="section__title about-section__title">About Me</h1>
                 <h4 class="section__subtitle">My Introduction</h4>
-                <div class="about__content">
+                <div class="about__content fade-in">
                     <div class="about__image">
                         <img src="../img/16x9-image.jpg" alt="picture-img">
                     </div>
@@ -179,7 +179,7 @@
                 <h4 class="section__subtitle">My Technical Level</h4>
                 <h3 class="skills__title"><i class="uil uil-brackets-curly skills-title__icon"></i> Front End Developer
                 </h3>
-                <div class="skills__frontend skills__items">
+                <div class="skills__frontend skills__items fade-in">
                     <div class="skills__item">
                         <div class="skills-items__title">
                             <img src="../img/html.png" alt="html">
@@ -215,7 +215,7 @@
                 </div>
                 <h3 class="skills__title"><i class="uil uil-server-network skills-title__icon"></i>Back End Developer
                 </h3>
-                <div class="skills__backend skills__items">
+                <div class="skills__backend skills__items fade-in-alt">
                     <div class="skills__item">
                         <div class="skills-items__title">
                             <img src="../img/php.png" alt="php">
@@ -251,7 +251,7 @@
                     </div>
                 </div>
                 <h3 class="skills__title"><i class="uil uil-swatchbook skills-icon skills-title__icon"></i>Designer</h3>
-                <div class="skills__designer skills__items">
+                <div class="skills__designer skills__items fade-in">
                     <div class="skills__item">
                         <div class="skills-items__title">
                             <img src="../img/figma.png" alt="figma">
@@ -286,7 +286,7 @@
                 <h1 class="section__title">Qualification</h1>
                 <h4 class="section__subtitle">My Personal Journey</h4>
                 <div class="qualification__items">
-                    <div class="qualification__item">
+                    <div class="qualification__item fade-in">
                         <h3 class="qualification__title"><i
                                 class="uil uil-graduation-cap qualification-title__icon"></i>
                             Education</h4>
@@ -330,7 +330,7 @@
                                 </div>
                             </div>
                     </div>
-                    <div class="qualification__item">
+                    <div class="qualification__item fade-in-alt">
                         <h3 class="qualification__title"><i class="uil uil-briefcase-alt qualification-title__icon"></i>
                             Work
                             </h4>
@@ -384,7 +384,7 @@
                 <h1 class="section__title">Services</h1>
                 <h4 class="section__subtitle">What I Offer</h4>
                 <div class="services__items">
-                    <div class="services__item">
+                    <div class="services__item fade-in">
                         <i class="uil uil-brackets-curly services-icon"></i>
                         <h2 class="services-item__title">Front-end Developer</h2>
                         <p>I create modern, responsive and intuitive interfaces, ensuring an attractive and functional
@@ -393,7 +393,7 @@
                         <span id="open-modal-0" onclick="openModal(0)">View More <i
                                 class="uil uil-arrow-right button-icon"></i></span>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item fade-in-alt">
                         <i class="uil uil-server services-icon"></i>
                         <h2 class="services-item__title">Back-end Developer</h2>
                         <p>I develop robust and scalable systems, structuring the logic and architecture that make
@@ -453,7 +453,7 @@
             <div class="portfolio-container container">
                 <h1 class="section__title">Portfolio</h1>
                 <h4 class="section__subtitle">Most Recent Works</h4>
-                <div class="portfolio__items">
+                <div class="portfolio__items fade-in">
                     <a href="github.com" target="_blank" class="portfolio__item">
                         <img src="../img/portfolio-1.png" alt="portfolio-item-1">
                         <div class="portfolio-item__hidden-content">
@@ -476,7 +476,7 @@
             </div>
         </section>
         <!-- CONTACT ME SKIP -->
-        <section class="section contact-me-skip">
+        <section class="section contact-me-skip fade-in-alt">
             <div class="contact-me-skip-container container">
                 <div class="contact-me-skip__text">
                     <span>Contact Me Now</span>
@@ -492,7 +492,7 @@
                 <h1 class="section__title">Contact Me</h1>
                 <h4 class="section__subtitle">Get in Touch</h4>
                 <div class="contact-me__box">
-                    <div class="contact-me__contacts">
+                    <div class="contact-me__contacts fade-in">
                         <div class="contact-me__contact">
                             <i class="uil uil-envelope-alt contact-me__icon"></i>
                             <div class="contact-me-contact__text ">
@@ -508,7 +508,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-me__form" onsubmit="submitForm(event)">
+                    <form class="contact-me__form fade-in-alt" onsubmit="submitForm(event)">
                         <div class="contact-me__form-1">
                             <div class="contact-me-form__name contact-me-form__item" data-input="name"
                                 onclick="inputFocus(event)">
@@ -531,16 +531,16 @@
                             <span>Message</span>
                             <textarea name="input-message" id="input-message" class="input input__textarea"></textarea>
                         </div>
+                        <buton class="g-recaptcha" data-sitekey="6LeJ8JsqAAAAAOMeocNxFRYkjSQYw8ldhO3dQvD9"></buton>
                         <button type="submit" class="contact-me-form__btn btn" id="send-message">Send Message
                             <i class="uil uil-message contact-me-form__btn-icon"></i>
                             <img src="../img/loading.svg" alt="loading" class="contact-me-form__loading">
                         </button>
                         <div class="contact-me__form-msg" id="contact-me-msgdiv">
-                            <i class="uil uil-exclamation-triangle form__error-icon"></i>
-                            <i class="uil uil-check-circle form__success-icon"></i>
-                            <span id="response-message"></span>
+                            <i class="uil uil-exclamation-triangle contact-me-msgdiv__icon form__error-icon"></i>
+                            <i class="uil uil-check-circle contact-me-msgdiv__icon form__success-icon"></i>
+                            <span id="response-message">Teste Teste Teste</span>
                         </div>
-                        <buton class="g-recaptcha" data-sitekey="6LeJ8JsqAAAAAOMeocNxFRYkjSQYw8ldhO3dQvD9">
                 </div>
             </div>
             </form>

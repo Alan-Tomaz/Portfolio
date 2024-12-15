@@ -20,6 +20,8 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --error-bg: hsl(355, 70%, 91%);
+    --error-color: hsl(354, 61%, 28%);
 
     /* ======== FONT and Typography ========= */
     --body-font: 'Poppins',
@@ -78,6 +80,8 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --error-bg: hsl(355, 70%, 91%);
+    --error-color: hsl(354, 61%, 28%);
 }
 
 /* DARK THEME */
@@ -94,6 +98,8 @@
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+    --error-bg: hsl(354, 61%, 28%);
+    --error-color: hsl(355, 70%, 91%);
 }
 
 /* GENERAL */
@@ -247,6 +253,37 @@ img {
 
 .show-scroll-up {
     bottom: 5rem;
+}
+
+/* FADE IN */
+
+/* Inicialmente ocultamos o elemento */
+.fade-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    /* Move o elemento para baixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-alt {
+    opacity: 0;
+    transform: translateX(100px);
+    /* Move o elemento para baixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Quando o elemento estiver visível */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Volta à posição original */
+}
+
+/* Quando o elemento estiver visível */
+.fade-in-alt.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Volta à posição original */
 }
 
 /* NAV */
@@ -1142,6 +1179,10 @@ img {
     border-radius: 10px;
 }
 
+.contact-me-form__item:hover {
+    cursor: text;
+}
+
 .contact-me-form__item span {
     font-weight: var(--font-regular);
     color: var(--title-color);
@@ -1165,9 +1206,28 @@ img {
 }
 
 .contact-me-form__loading {
-    width: 23px;
-    height: 23px;
+    width: 16px;
+    height: 16px;
     display: none;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contact-me-form__btn-icon {
+    opacity: 1;
+    visibility: visible;
+    transition: .3s;
+}
+
+.contact-me-form__btn.load .contact-me-form__loading {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-me-form__btn.load .contact-me-form__btn-icon {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .contact-me-form__btn.loading .contact-me-form__loading {
@@ -1176,6 +1236,55 @@ img {
 
 .contact-me-form__btn.loading .contact-me-form__btn-icon {
     display: none;
+}
+
+.contact-me__form-msg {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 5px;
+    padding: .8rem 1rem;
+    height: 100%;
+    width: 100%;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    transition: .5s;
+}
+
+.contact-me-msgdiv__icon {
+    font-size: 1.2rem;
+}
+
+.contact-me__form-msg.success {
+    background-color: var(--first-color);
+    color: white;
+    visibility: visible;
+    opacity: 1;
+}
+
+.contact-me__form-msg.error {
+    background-color: var(--error-bg);
+    color: var(--error-color);
+    visibility: visible;
+    opacity: 1;
+}
+
+.form__success-icon {
+    display: none;
+}
+
+.contact-me__form-msg.success .form__success-icon {
+    display: flex;
+}
+
+.form__error-icon {
+    display: none;
+}
+
+.contact-me__form-msg.error .form__error-icon {
+    display: flex;
 }
 
 /* FOOTER */

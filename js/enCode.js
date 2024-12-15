@@ -40,11 +40,16 @@ typeEffect();
 const msgDiv = document.getElementById("contact-me-msgdiv");
 const messageSpan = document.getElementById("response-message");
 const sendMessageBtn = document.getElementById("send-message");
+const loadingTimeout = [];
 
 async function submitForm(e) {
     e.preventDefault();
 
-    sendMessageBtn.classList.add("loading")
+    loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+    sendMessageBtn.classList.add("load")
+    loadingTimeout.push(setTimeout(() => {
+        sendMessageBtn.classList.add("loading")
+    }, 300));
 
     const recaptchaResponse = grecaptcha.getResponse();
 
@@ -56,7 +61,16 @@ async function submitForm(e) {
     if ((name == null || !name) || (email == null || !email) || (subject == null || !subject) || (message == null || !message)) {
         msgDiv.classList.remove("form-success");
         msgDiv.classList.add("form-error");
-        sendMessageBtn.classList.remove("loading");
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load");
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
+        msgDiv.classList.remove("success")
+        msgDiv.classList.add("error")
         messageSpan.innerText = "Fill All Forms";
         return;
     }
@@ -64,7 +78,16 @@ async function submitForm(e) {
     if (email.length < 8) {
         msgDiv.classList.remove("form-success");
         msgDiv.classList.add("form-error");
-        sendMessageBtn.classList.remove("loading");
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load");
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
+        msgDiv.classList.remove("success")
+        msgDiv.classList.add("error")
         messageSpan.innerText = "Email Too Short";
         return;
     }
@@ -72,7 +95,16 @@ async function submitForm(e) {
     if (message.length < 8) {
         msgDiv.classList.remove("form-success");
         msgDiv.classList.add("form-error");
-        sendMessageBtn.classList.remove("loading");
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load");
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
+        msgDiv.classList.remove("success")
+        msgDiv.classList.add("error")
         messageSpan.innerText = "Message Too Short";
         return;
     }
@@ -82,7 +114,16 @@ async function submitForm(e) {
     if (!emailRegex.test(email)) {
         msgDiv.classList.remove("form-success");
         msgDiv.classList.add("form-error");
-        sendMessageBtn.classList.remove("loading");
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load");
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
+        msgDiv.classList.remove("success")
+        msgDiv.classList.add("error")
         messageSpan.innerText = "Invalid Email.";
         return;
     }
@@ -99,7 +140,16 @@ async function submitForm(e) {
     if (!recaptchaResponse) {
         msgDiv.classList.remove("form-success");
         msgDiv.classList.add("form-error");
-        sendMessageBtn.classList.remove("loading");
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load");
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
+        msgDiv.classList.remove("success")
+        msgDiv.classList.add("error")
         messageSpan.innerText = "Please complete the captcha";
         return;
     }
@@ -115,45 +165,73 @@ async function submitForm(e) {
         });
 
         const result = await response.json();
-        sendMessageBtn.classList.remove("loading")
-        console.log(result);
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load")
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
         if (result.isError == false) {
             grecaptcha.reset();
-            msgDiv.classList.add("form-success");
-            msgDiv.classList.remove("form-error");
+
+            msgDiv.classList.remove("error")
+            msgDiv.classList.add("success")
             messageSpan.innerText = "Email Successfully Sended";
         } else {
             msgDiv.classList.remove("form-success");
             msgDiv.classList.add("form-error");
             switch (result.error) {
                 case 0:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Internal Error. Try Again Later";
                     break;
                 case 1:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Invalid reCaptcha. Try Again";
                     break;
                 case 2:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Fill All Forms!";
                     break;
                 case 3:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Email Too Short!";
                     break;
                 case 4:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Message Too Short!";
                     break;
                 case 5:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Error sending Email. Try Again";
                     break;
                 case 6:
+                    msgDiv.classList.remove("success")
+                    msgDiv.classList.add("error")
                     messageSpan.innerText = "Internal Error. Try Again Later";
                     break;
             }
             grecaptcha.reset();
         }
     } catch (error) {
-        sendMessageBtn.classList.remove("loading")
-        msgDiv.classList.remove("form-success");
-        msgDiv.classList.add("form-error");
+
+        loadingTimeout.forEach((timeout) => clearTimeout(timeout));
+        sendMessageBtn.classList.remove("load")
+        loadingTimeout.push(setTimeout(() => {
+            sendMessageBtn.classList.remove("loading")
+        }, 300));
+
+
+        msgDiv.classList.remove("success")
+        msgDiv.classList.add("error")
         messageSpan.innerText = "Error to Send Email. Try Again Later";
     }
 }

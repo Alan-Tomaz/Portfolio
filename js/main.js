@@ -225,3 +225,23 @@ function inputFocus(e) {
     const contactmeForm = document.getElementById(`input-${e.target.dataset.input}`);
     contactmeForm.focus();
 }
+
+/* FADEIN SECTIONS */
+// Seleciona todas as seções com a classe "fade-in"
+const sections = document.querySelectorAll('.fade-in');
+const sectionsAlt = document.querySelectorAll('.fade-in-alt');
+
+// Cria um observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Adiciona a classe "visible"
+        }
+    });
+}, {
+    threshold: 0.1 // Quando 10% da seção estiver visível
+});
+
+// Observa cada seção
+sections.forEach(section => observer.observe(section));
+sectionsAlt.forEach(section => observer.observe(section));

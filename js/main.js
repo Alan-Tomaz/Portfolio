@@ -230,6 +230,7 @@ function inputFocus(e) {
 // Seleciona todas as seções com a classe "fade-in"
 const sections = document.querySelectorAll('.fade-in');
 const sectionsAlt = document.querySelectorAll('.fade-in-alt');
+const sectionsFast = document.querySelectorAll('.fade-in-fast');
 
 // Cria um observer
 const observer = new IntersectionObserver((entries) => {
@@ -242,6 +243,17 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.1 // Quando 10% da seção estiver visível
 });
 
+const observerFast = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Adiciona a classe "visible"
+        }
+    });
+}, {
+    threshold: 0.0 // Assim que o elemento entrar na viewport
+});
+
 // Observa cada seção
 sections.forEach(section => observer.observe(section));
 sectionsAlt.forEach(section => observer.observe(section));
+sectionsFast.forEach(section => observerFast.observe(section));

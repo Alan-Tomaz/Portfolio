@@ -110,6 +110,10 @@
     font-family: var(--body-font);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--body-color);
     color: var(--text-color);
@@ -160,6 +164,8 @@ img {
 .container-larger {
     max-width: 1540px;
     margin: 0 auto;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
 }
 
 .container {
@@ -168,7 +174,7 @@ img {
 }
 
 .header {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -272,6 +278,13 @@ img {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.fade-in-fast {
+    opacity: 0;
+    transform: translateX(-100px);
+    /* Move o elemento para baixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 /* Quando o elemento estiver visível */
 .fade-in.visible {
     opacity: 1;
@@ -281,6 +294,12 @@ img {
 
 /* Quando o elemento estiver visível */
 .fade-in-alt.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Volta à posição original */
+}
+
+.fade-in-fast.visible {
     opacity: 1;
     transform: translateX(0);
     /* Volta à posição original */
@@ -593,6 +612,10 @@ img {
     width: 50%;
 }
 
+.about__right-content p {
+    text-align: center;
+}
+
 .about__stats {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -852,6 +875,10 @@ img {
     font-size: var(--h3-font-size);
     margin-bottom: 2rem;
     margin-top: .5rem;
+}
+
+.services__item p {
+    text-align: center;
 }
 
 .services__item span {
@@ -1382,3 +1409,50 @@ footer {
 }
 
 /* MEDIA QUERIES */
+/* MEDIUM MONITORS */
+@media (max-width: 1440px) {
+    .container-larger {
+        max-width: 1200px;
+    }
+
+    .container {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        max-width: 1200px;
+    }
+
+    .nav-menu {
+        width: initial;
+    }
+
+    .home__picture {
+        width: 50%;
+    }
+
+    .home__text {
+        width: 50%;
+    }
+
+    .services__items {
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .services__item {
+        width: 46%;
+    }
+
+    .services__item p {
+        height: 100%;
+    }
+
+    .contact-me__box {
+        padding: 0 2rem;
+    }
+}
+
+/* MEDIUM DEVICES */
+@media (max-width: 1024px) {}
+
+/* SMALL DEVICES */
+@media (max-width: 767px) {}

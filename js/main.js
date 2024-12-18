@@ -228,9 +228,9 @@ function inputFocus(e) {
 
 /* FADEIN SECTIONS */
 // Seleciona todas as seções com a classe "fade-in"
-const sections = document.querySelectorAll('.fade-in');
-const sectionsAlt = document.querySelectorAll('.fade-in-alt');
-const sectionsFast = document.querySelectorAll('.fade-in-fast');
+const sectionsFade = document.querySelectorAll('.fade-in');
+const sectionsFadeAlt = document.querySelectorAll('.fade-in-alt');
+const sectionsFadeFast = document.querySelectorAll('.fade-in-fast');
 
 // Cria um observer
 const observer = new IntersectionObserver((entries) => {
@@ -254,6 +254,57 @@ const observerFast = new IntersectionObserver((entries) => {
 });
 
 // Observa cada seção
-sections.forEach(section => observer.observe(section));
-sectionsAlt.forEach(section => observer.observe(section));
-sectionsFast.forEach(section => observerFast.observe(section));
+sectionsFade.forEach(section => observer.observe(section));
+sectionsFadeAlt.forEach(section => observer.observe(section));
+sectionsFadeFast.forEach(section => observerFast.observe(section));
+
+
+/* ============= MENU SHOW AND HIDDEN ================  */
+const navMenu = document.getElementById('nav-menu'),
+    navToogle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+
+/* ===== MENU SHOW ======  */
+// Validate if constant exists
+if (navToogle) {
+    navToogle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+    })
+}
+
+/* ===== MENU HIDDEN ======  */
+// Validate if constant exists
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    })
+}
+
+/* ===== REMOVE MENU MOBILE ======  */
+const navLink = document.querySelectorAll('.nav-list-alt__item')
+
+function linkAction() {
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*============= SCROLL SECTIONS ACTIVE LINK ==============*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelectorAll('.nav-menu__box a[href*=' + sectionId + ']').forEach(elem => elem.classList.add('active-link'))
+        } else {
+            document.querySelectorAll('.nav-menu__box a[href*=' + sectionId + ']').forEach(elem => elem.classList.remove('active-link'))
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)

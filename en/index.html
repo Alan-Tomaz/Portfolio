@@ -26,23 +26,30 @@
         <!-- NAV -->
         <nav class="header-nav container-larger">
             <a href="#home" class="header-nav__logo">Alan</a>
-            <div class="nav-menu-alt">
+            <div class="nav-menu-alt nav-menu__box" id="nav-menu">
                 <ul class="nav-menu-alt-list">
-                    <li class="nav-list__item"><a href="#home" class="nav-item__link"><i
-                                class="uil uil-estate nav-icon"></i>Home</a></li>
-                    <li class="nav-list__item"><a href="#about" class="nav-item__link"><i
-                                class="uil uil-user nav-icon"></i>About</a></li>
-                    <li class="nav-list__item"><a href="#skills" class="nav-item__link"><i
+                    <li class="nav-list__item nav-list-alt__item"><a href="#home"
+                            class="nav-item__link nav-alt-item__link"><i class="uil uil-estate nav-icon"></i>Home</a>
+                    </li>
+                    <li class="nav-list__item nav-list-alt__item"><a href="#about"
+                            class="nav-item__link nav-alt-item__link"><i class="uil uil-user nav-icon"></i>About</a>
+                    </li>
+                    <li class="nav-list__item nav-list-alt__item"><a href="#skills"
+                            class="nav-item__link nav-alt-item__link"><i
                                 class="uil uil-file-alt nav-icon"></i>Skills</a></li>
-                    <li class="nav-list__item"><a href="#services" class="nav-item__link"><i
+                    <li class="nav-list__item nav-list-alt__item"><a href="#services"
+                            class="nav-item__link nav-alt-item__link"><i
                                 class="uil uil-briefcase-alt nav-icon"></i>Services</a></li>
-                    <li class="nav-list__item"><a href="#portfolio" class="nav-item__link nav-item__link--actived"><i
+                    <li class="nav-list__item nav-list-alt__item"><a href="#portfolio"
+                            class="nav-item__link  nav-alt-item__link nav-item__link--actived"><i
                                 class="uil uil-scenery nav-icon"></i>Portfolio</a></li>
-                    <li class="nav-list__item"><a href="#contact-me" class="nav-item__link"><i
-                                class="uil uil-message nav-icon"></i>Contact Me</a></li>
+                    <li class="nav-list__item nav-list-alt__item"><a href="#contact-me"
+                            class="nav-item__link nav-alt-item__link"><i class="uil uil-message nav-icon"></i>Contact
+                            Me</a></li>
                 </ul>
+                <i class="uil uil-times nav-menu__close" id="nav-close"></i>
             </div>
-            <div class="nav-menu">
+            <div class="nav-menu nav-menu__box">
                 <ul class="nav-list">
                     <li class="nav-list__item"><a href="#home" class="nav-item__link">Home</a></li>
                     <li class="nav-list__item"><a href="#about" class="nav-item__link">About</a></li>
@@ -63,7 +70,7 @@
                             <span id="change-language" onclick="changeLanguage('pt-br')">PT-BR</span>
                         </div>
                     </div>
-                    <i class=" uil uil-bars nav-btns__btn nav-item__link menu-btn"></i>
+                    <i class=" uil uil-apps nav-btns__btn nav-item__link menu-btn" id="nav-toggle"></i>
                 </div>
             </div>
         </nav>
@@ -281,7 +288,7 @@
             </div>
         </section>
         <!-- QUALIFICATION -->
-        <section class="section qualification" id="qualification">
+        <section class="section qualification">
             <div class="qualification-container container">
                 <h1 class="section__title">Qualification</h1>
                 <h4 class="section__subtitle">My Personal Journey</h4>

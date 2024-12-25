@@ -1692,6 +1692,23 @@ footer {
         display: none;
     } */
 
+    .services-modal__window {
+        padding: 1rem 1.5rem 2rem 1.5rem;
+        margin: 0 10px;
+    }
+
+    .modal__title {
+        align-items: flex-end;
+    }
+
+    .modal__title h3 {
+        width: 150px;
+    }
+
+    .modal-window__close {
+        align-self: flex-start;
+    }
+
     .portfolio__item {
         width: 100%;
     }
@@ -1744,5 +1761,4 @@ footer {
     .footer__middle {
         flex-direction: column;
     }
-
 }

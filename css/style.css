@@ -1657,6 +1657,10 @@ footer {
         max-width: 400px;
     }
 
+    .home {
+        padding-top: 3.5rem;
+    }
+
     .home__text {
         width: 100%;
     }

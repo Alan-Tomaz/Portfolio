@@ -1648,6 +1648,10 @@ footer {
         max-width: 100%;
     }
 
+    .nav-btns {
+        gap: 1rem;
+    }
+
     .home__picture {
         width: 90%;
         max-width: 400px;
@@ -1696,7 +1700,17 @@ footer {
         display: flex;
         flex-direction: column;
         max-width: initial;
-        padding: 0;
+        padding: 2rem !important;
+        margin: 0;
+        width: 100%;
+        gap: 5rem;
+        height: 100%;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .contact-me-skip-container img {
+        width: 90%;
     }
 
     .contact-me__box {
@@ -1712,4 +1726,23 @@ footer {
     .contact-me__form-1 {
         flex-direction: column;
     }
+
+    .footer-container {
+        padding: 2.5rem 0 2.5rem 0;
+        gap: 5rem;
+    }
+
+    .footer__left {
+        text-align: center;
+    }
+
+    .footer__box {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .footer__middle {
+        flex-direction: column;
+    }
+
 }

@@ -729,6 +729,21 @@ img {
     margin-bottom: var(--mb-8);
 }
 
+.skills__items--alt {
+flex-wrap: wrap;
+gap: 3rem 0;
+}
+
+.skills-item--alt {
+ display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+ .skills-item--alt2 {
+        display: none !important;
+    }
+
 .skills__item {
     display: flex;
     flex-direction: column;
@@ -1571,6 +1586,14 @@ footer {
     .skills__items {
         flex-wrap: wrap;
         gap: 3rem 0;
+    }
+    
+   .skills-item--alt {
+     display: none !important;
+    }
+
+    .skills-item--alt2 {
+        display: flex !important;
     }
 
     .skills__item {

@@ -644,7 +644,7 @@ img {
     position: relative;
 }
 
-.about__button .btn a {
+.about__button .btn span {
     color: white;
 }
 

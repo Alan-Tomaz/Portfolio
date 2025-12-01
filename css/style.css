@@ -1041,6 +1041,12 @@ img {
   opacity: 1;
 }
 
+.portfolio__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 .portfolio-item__hidden-content {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.8);
